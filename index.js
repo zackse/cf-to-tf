@@ -2,7 +2,7 @@
 
 const program = require('commander');
 const awsGetStack = require('./lib/stack');
-const awsGetTemplate = require('./lib/template');
+const template = require('./lib/template');
 const configuration = require('./lib/configuration');
 const state = require('./lib/state');
 const cleanHCL = require('./lib/cleanHCL');
@@ -74,7 +74,7 @@ program
 	.description('Prints the CloudFormation Stack Template')
 	.action(options => {
 		const opts = formatOptions(options);
-		return awsGetTemplate(opts)
+		return template.awsGetTemplate(opts)
 			.then(result => console.log(JSON.stringify(result)))
 			.catch(err => handleError(err));
 	});

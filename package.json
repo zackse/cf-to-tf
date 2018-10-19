@@ -20,7 +20,8 @@
   "dependencies": {
     "aws-sdk": "^2.94.0",
     "commander": "^2.11.0",
-    "get-stdin": "^5.0.1"
+    "get-stdin": "^5.0.1",
+    "yaml": ""
   },
   "devDependencies": {
     "aws-sdk-mock": "^1.7.0",
